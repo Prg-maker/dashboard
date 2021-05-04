@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6e6a8855c.js" crossorigin="anonymous"></script>
+    <title>Dashbord</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <header class="top_profile">
+                <h3>Overview</h3>
+    
+                <div class="profile">
+                        <div class="input">
+                            
+                        </div>
+                        
+                        <img id="search" onclick="search()" class="fas search" src="/src/img/search.png" alt="search">
+                        <img onclick="notification()" class="fas new" src="/src/img/new.png" alt=""> 
+
+                        
+                    <div class="row"></div>
+                    <div class="my_profile">   
+                        <h4>Daniel</h4>
+                        <img  src="/src/img/m header.png" alt="">
+                    </div>
+                 
+                </div>
+            </header>
+        </div>
+               
+        <div class="sidebar">
+                <header>
+                    
+                    <h2><img src="../img/logo.png" alt=""></i>Dashborad kid</h2>
+
+                    <div class="links">
+                        <p><img  src="../img/1. overview.png" alt=""></i>Overview</p>
+                        <p><img src="../img/2. tickets.png" alt=""></i>Tickets</p>
+                        <p><img src="../img/ideas.png" alt=""></i>Ideas</p>
+                        <p><img src="../img/Vector.png" alt=""></i>Contacts</p>
+                        <p><img src="../img/agent.png" alt=""></i>Agents</p>
+                        <p><img src="../img/list.png" alt=""></i>Articles</p>
+
+                        <div class="others">
+                            <hr>
+                            <p class="fist"><img src="../img/settings.png" alt="">Settings</p>
+                            <p><img src="../img/sub.png" alt="">Subscription</p>
+                        </div>
+                    </div>
+
+
+                </header>
+        </div>
+
+        <div class="overview">
+            
+            <div class="card-container">
+                <div class="cards">
+                    <h3>Unresolved</h3>
+                    <p>60</p>
+                </div>
+
+                <div class="cards">
+                    <h3>Overdue</h3>
+                    <p>16</p>
+                </div>
+
+
+                <div class="cards">
+                    <h3>Open</h3>
+                    <p>43</p>
+                </div>
+
+                <div class="cards">
+                    <h3>On hold</h3>
+                    <p>64</p>
+                </div>
+            </div>
+
+
+
+            <div class="table">
+                <h3 class="title_table">Today's trends</h3>
+                <p class="data">as of 25 May 2019, 09:41 PM</p>
+
+                <div  class="row_bol blue"></div>
+                <p class="bol">Today</p>
+                <div class="row_bol gray"></div>
+                <p class="bol">Yesterday</p>
+
+
+                <div class="grafic">
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                      google.charts.load('current', {'packages':['corechart']});
+                      google.charts.setOnLoadCallback(drawChart);
+                
+                      function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                          ['Year', 'Sales', 'Expenses'],
+                          ['2004',  1000,      400],
+                          ['2005',  1170,      460],
+                          ['2006',  660,       1120],
+                          ['2007',  1030,      540]
+                        ]);
+                
+                        var options = {
+                          title: 'Company Performance',
+                          curveType: 'function',
+                          legend: { position: 'bottom' }
+                        };
+                
+                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                
+                        chart.draw(data, options);
+                      }
+                    </script>
+                    <div id="curve_chart" style="width: 640px; height: 390px"></div>
+               
+                </div>
+
+
+                <div class="results">
+                    <div class="results_on">
+                        <p>Resolved</p>
+                        <h3>449</h3>
+                    </div>
+
+                    <div class="results_on">
+                        <p>Received</p>
+                        <h3>426</h3>
+                    </div>
+                    <div class="results_on">
+                        <p>Average fist response time</p>
+                        <h3>33m</h3>
+                    </div>
+                    <div class="results_on">
+                        <p>Average response time</p>
+                        <h3>3h 8m</h3>
+                    </div>
+                    <div class="results_on">
+                        <p>Resolution within SLA</p>
+                        <h3>94%</h3>
+                    </div>
+
+
+                    
+                   
+                </div>
+                
+            </div>
+
+
+            <div class="bottom">
+                <footer>
+                    
+                    <div class="card rigth">
+                        <h3>Unresolved tickets</h3>
+                        <p class="support">Group: <a href="#" class="a"> Support</a></p>
+
+                        <p class="view">View details</p>
+
+
+                        <div class="data_on_project">
+                            <p class="waiting">Waiting on Feature Request <a href="#">4238</a></p>
+
+                            <hr>
+                            <p>Awaiting Customer Response <a href="#">1005</a></p>
+                            <hr>
+
+                            <p>Awaiting Devoloper Fix <a href="#">914</a></p>
+                            <hr>
+
+                            <p>Pending <a href="#">281</a></p>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="card left">          
+                        <h3>Tasks</h3>   
+                        <p class="today">Today</p>
+
+
+                        <p class="all">View all</p>
+
+
+                        <div class="status">
+                            <p class="input_on create">Create new task <img src="/src/img/inactive.png" alt=""></p>
+                            <hr class="fist">
+
+                            <div class="container_status b">
+                                <p class="input_on" id="fist"> Finish ticket update</p>
+                                <label id="fist_input" class="container_label">
+                                    <input type="checkbox" name="" id="">
+                                    <span  class="checkmart"></span>
+                                </label>
+
+
+                                <p id="urgent">URGENT</p>
+
+                            </div>
+                            <hr>
+                            <div class="container_status">
+                                <p class="input_on" id="second">Create new ticket example</p>
+
+                                <label id="second_input" class="container_label">
+                                    <input type="checkbox" name="" id="">
+                                    <span class="checkmart"></span>
+                                </label>
+                               
+                                <p id="new">NEW</p>
+
+                            </div>
+
+                            <hr class="last">
+                            
+                            <div class="container_status">
+                                
+                                <p class="input_on" id="tree">Update ticket report</p>
+                                <label id="tree_input" class="container_label">
+                                    <input type="checkbox" name="" id="">
+                                    <span class="checkmart"></span>
+                                </label>
+                                <p id="default">DEFAULT</p>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                   
+                </footer>
+            </div>
+            
+            
+        </div>
+       
+        
+    </div>
+    
+   <script src="/src/scripts/overview.js"></script>
+</body>
+</html>
